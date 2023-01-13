@@ -1,3 +1,44 @@
 .intro {
     text-align: center;
 }
+
+body {
+    background-color: aqua;
+}
+
+.hide {
+    display: none; 
+}
+
+.parent-circle {
+    position: relative; 
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.magic{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.formInput{
+    text-align: center;
+}
+
+#circle {
+    font-size: 14pt;
+    background-color: white;
+    color: black;
+    position: absolute; 
+    top: 75px;
+    left: 75px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+

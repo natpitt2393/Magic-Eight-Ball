@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,23 @@
     <title>Magic Eight Ball</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="hero">
+
+<body>
     <h1 class="intro">Let the Magic 8 Ball tell your future!</h1>
-    <img src="images/Magic8ball.jpg"/>
-    <form>
-        <label for="question">What would you like to ask the Magic 8 Ball?</label>
-        <input type="text" id="'question" name="question" placeholder="Type your question here">
-        <input class="questionButton" type="button" value="Click to see answer">
-    </form>
-    <div class="answer">
-        <p></p>
+    <div class="magic">
+        <div class="parent-circle">
+        <img src="images/magic-eight-ball.jpg" />
+        <div id='circle'></div>
     </div>
+    </div>
+    <form class="formInput">
+        <label for="question">What would you like to ask the Magic 8 Ball?</label>
+        <input type="text" id="question" name="question" value="">
+    </form>
+    <button class="shake">Shake</button>
+    <img id="funnyImage" />
 
     <script src="index.js"></script>
 </body>
+
 </html>

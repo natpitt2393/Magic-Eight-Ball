@@ -47,8 +47,6 @@
 
 // }
 
-let question = "";
-
 
 const eightBallAnswers = [
     "Seems unlikely",
@@ -72,16 +70,27 @@ const eightBallAnswers = [
 ];
 
 
+let funnyImage = document.getElementById('funnyImage')
 let index = Math.floor(Math.random() * eightBallAnswers.length);
-const answerEl = document.querySelector(".answer");
-const questionButtonEl = document.querySelector('.questionButton');
+const answerEl = document.querySelector("#circle");
+const questionButtonEl = document.querySelector('.shake');
+const questionEl = document.getElementById('question');
 // console.log(index);
 // console.log(eightBallAnswers);
 
+
+questionEl.addEventListener('focus', () => {
+    answerEl.style.display = "none";
+    questionEl.value = ''; 
+    funnyImage.src = '';
+})
+
 function displayEightBallAnswer() {
-    let displayedEightBallResponse = answerEl;
-    // console.log(eightBallAnswers[index]);
-    displayedEightBallResponse.textContent = `The Magic Eight Ball says, ${eightBallAnswers[index]}`;
+    console.log(eightBallAnswers[index]);
+    console.log(eightBallAnswers[index]);
+    answerEl.style.display = 'flex';
+    answerEl.innerHTML = eightBallAnswers[index];
+
     if (index <= 6) {
         showImage("ohno")
     } else if (index <= 10) {
@@ -92,11 +101,18 @@ function displayEightBallAnswer() {
 };
 
 function showImage(name) {
-    let funnyImage = new Image();
     funnyImage.src = 'images/' + name + '.jpg';
-    document.body.appendChild(funnyImage);
+    // document.body.appendChild(funnyImage);
 }
 
+
+
+
 questionButtonEl.addEventListener('click', function () {
+    console.log(questionEl.value);
     displayEightBallAnswer();
 })
+
+// questionEl.addEventListener('change', () => {
+//     console.log(questionEl.value);
+// })
